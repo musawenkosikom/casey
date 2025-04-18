@@ -80,6 +80,7 @@ const Gallery = () => {
       dimensions: "1.2m X 1.6m",
       image: "/10.jpg",
       featured: true,
+      sold: true,
       description: "A young adult man gazes upward, his expression calm, against a monochromatic pink and blue backdrop"
     },
     {
@@ -116,6 +117,7 @@ const Gallery = () => {
       dimensions: "35cm X 40cm",
       image: "/14.jpg",
       featured: true,
+      sold: true,
       description: "A contemplative woman gazes directly at the viewer, set against a vibrant pink and blue backdrop"
     },
     {
@@ -128,6 +130,7 @@ const Gallery = () => {
       dimensions: "A1",
       image: "/16.jpg",
       featured: true,
+      sold: true,
       description: "Two elephants share a tender hug, their trunks entwined in a heartwarming display of affection"
     },
     {
@@ -140,6 +143,7 @@ const Gallery = () => {
       dimensions: "1.8m X 800cm",
       image: "/15.jpg",
       featured: true,
+      sold: true,
       description: "A confident woman stares directly ahead, her Afro a vibrant tangle of black paint, set against a stark white background"
     },
     {
@@ -152,6 +156,7 @@ const Gallery = () => {
       dimensions: "35cm X 40cm",
       image: "/17.jpg",
       featured: true,
+      sold: true,
       description: "A serene woman contemplates, her hands cupped in a gesture of introspection"
     },
     {
@@ -169,6 +174,7 @@ const Gallery = () => {
     {
       id: 10,
       title: "Simple Things 1",
+      
       artist: "Jacqueline Casey",
       category: "Mixed Media",
       year: "2022",
@@ -287,7 +293,7 @@ const Gallery = () => {
   return (
     <>
       <ParallaxSection
-        bgImage="/3.jpg"
+        bgImage="/2.jpg"
         overlayColor="rgba(26, 0, 0, 0.9)"
       >
         <section className="py-20 min-h-screen">
@@ -305,7 +311,7 @@ const Gallery = () => {
               {artworks.map(artwork => (
                 <div 
                   key={artwork.id} 
-                  className="group"
+                  className="group relative"
                   data-aos="fade-up" 
                   data-aos-delay={artwork.id * 100}
                 >
@@ -316,20 +322,32 @@ const Gallery = () => {
                       className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     
-                    {artwork.featured && (
-                      <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4 flex gap-2">
+                      {artwork.featured && (
                         <span className="bg-[#ff1a1a] text-white text-xs px-3 py-1 rounded-full">
                           Featured
                         </span>
-                      </div>
-                    )}
+                      )}
+                      {artwork.sold && (
+                        <span className="bg-black/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
+                          SOLD
+                        </span>
+                      )}
+                    </div>
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1a0000] to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <h3 className="text-white text-xl font-bold">{artwork.title}</h3>
                       <p className="text-white/80">{artwork.artist}</p>
-                      <span className="inline-block mt-2 text-xs bg-white/20 text-white px-2 py-1 rounded-full">
-                        {artwork.category}
-                      </span>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-full">
+                          {artwork.category}
+                        </span>
+                        {artwork.sold && (
+                          <span className="text-xs bg-black/50 text-white px-2 py-1 rounded-full">
+                            SOLD
+                          </span>
+                        )}
+                      </div>
                       <button 
                         className="mt-4 px-4 py-2 bg-[#ff1a1a] text-white rounded-full text-sm hover:bg-[#cc0000] transition-colors"
                         onClick={() => setSelectedArtwork(artwork)}
