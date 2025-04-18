@@ -27,6 +27,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
+            <img 
+              src="/7.jpg" 
+              alt="EKSPERIMENT Logo" 
+              className="h-10 w-10 object-cover rounded-full border-2 border-[#ff1a1a]/20 shadow-lg mr-3"
+            />
             <span className="artistic-text gradient-text text-2xl font-bold">EKSPERIMENT</span>
           </Link>
 
