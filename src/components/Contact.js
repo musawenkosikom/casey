@@ -37,7 +37,12 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_name: emailConfig.toName
+        to_name: emailConfig.toName,
+        reply_to: formData.email,
+        customer_name: formData.name,
+        customer_email: formData.email,
+        customer_subject: formData.subject,
+        customer_message: formData.message
       };
 
       const response = await emailjs.send(
