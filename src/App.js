@@ -73,7 +73,7 @@ const Home = () => {
                 
                 <div className="hero-image" data-aos="fade-up">
                   <img 
-                    src="/3.jpg"
+                    src="/13.jpg"
                     alt="EKSPERIMENT Art"
                     className="w-full h-full object-cover rounded-lg shadow-2xl"
                   />

@@ -103,12 +103,6 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
-            <button 
-              className="artistic-button w-full"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact Us
-            </button>
           </div>
         </div>
       )}
