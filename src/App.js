@@ -64,6 +64,25 @@ const Home = () => {
                   exhibitions, and collaborations.
                 </p>
               </div>
+
+                {/* Images - Right Side */}
+              <div className="relative">
+                {/* Decorative elements */}
+                <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-[#ff1a1a]/40 z-10 rounded-tl-lg"></div>
+                <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-[#ff1a1a]/40 z-10 rounded-br-lg"></div>
+                
+                <div className="hero-image" data-aos="fade-up">
+                  <img 
+                    src="/3.jpg"
+                    alt="EKSPERIMENT Art"
+                    className="w-full h-full object-cover rounded-lg shadow-2xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0000] to-transparent opacity-40 rounded-lg"></div>
+                  <div className="absolute bottom-3 left-3 bg-black/50 px-2 py-1 rounded text-xs text-white backdrop-blur-sm">
+                    Featured Artwork
+                  </div>
+                </div>
+              </div>
               
               <div className="flex flex-wrap gap-4 mt-8 slide-in" style={{ animationDelay: '0.3s' }}>
                 <button 
@@ -79,24 +98,7 @@ const Home = () => {
               </div>
             </div>
             
-            {/* Images - Right Side */}
-            <div className="relative">
-              {/* Decorative elements */}
-              <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-[#ff1a1a]/40 z-10 rounded-tl-lg"></div>
-              <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-[#ff1a1a]/40 z-10 rounded-br-lg"></div>
-              
-              <div className="hero-image" data-aos="fade-up">
-                <img 
-                  src="/3.jpg"
-                  alt="EKSPERIMENT Art"
-                  className="w-full h-full object-cover rounded-lg shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0000] to-transparent opacity-40 rounded-lg"></div>
-                <div className="absolute bottom-3 left-3 bg-black/50 px-2 py-1 rounded text-xs text-white backdrop-blur-sm">
-                  Featured Artwork
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
