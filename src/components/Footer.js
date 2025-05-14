@@ -66,7 +66,7 @@ const Footer = () => {
               </p>
               <p className="text-white/70">
                 <span className="text-[#ff1a1a] mr-2">●</span>
-                (+27) 68-436-8658
+                (+27) 68-439-8658
               </p>
             </div>
             <div className="flex space-x-4 mt-4">

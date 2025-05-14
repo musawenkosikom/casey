@@ -47,60 +47,59 @@ const Home = () => {
         {/* Background blur elements */}
         <div className="absolute top-1/4 left-1/4 w-60 h-60 bg-[#ff1a1a] opacity-10 rounded-full blur-3xl z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#800000] opacity-10 rounded-full blur-3xl z-0"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content - Left Side */}
-            <div className="text-left">
-              <div className="slide-in">
-                <h1 className="artistic-heading mb-2">EKSPERIMENT</h1>
-                <h2 className="text-white text-2xl mb-8">Where Art Meets Audience</h2>
-              </div>
-              
-              <div className="max-w-lg mb-10 slide-in" style={{ animationDelay: '0.2s' }}>
-                <p className="text-white/90 text-lg">
-                  A platform dedicated to showcasing the raw, unfiltered creativity of South African artists. 
-                  Acting as the bridge between artists and audiences, we provide a space for unique features, 
-                  exhibitions, and collaborations.
-                </p>
-              </div>
 
-                {/* Images - Right Side */}
-              <div className="relative">
-                {/* Decorative elements */}
-                <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-[#ff1a1a]/40 z-10 rounded-tl-lg"></div>
-                <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-[#ff1a1a]/40 z-10 rounded-br-lg"></div>
-                
-                <div className="hero-image" data-aos="fade-up">
-                  <img 
-                    src="/13.jpg"
-                    alt="EKSPERIMENT Art"
-                    className="w-full h-full object-cover rounded-lg shadow-2xl"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0000] to-transparent opacity-40 rounded-lg"></div>
-                  <div className="absolute bottom-3 left-3 bg-black/50 px-2 py-1 rounded text-xs text-white backdrop-blur-sm">
-                    Featured Artwork
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-4 mt-8 slide-in" style={{ animationDelay: '0.3s' }}>
-                <button 
-                  onClick={goToGallery} 
-                  className="artistic-button hover:scale-105 transform transition-all duration-300"
-                  aria-label="Go to gallery"
-                >
-                  Explore Now
-                </button>
-                <Link to="/contact" className="artistic-button" style={{ background: 'rgba(255, 26, 26, 0.3)', backdropFilter: 'blur(5px)' }}>
-                  Contact Us
-                </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content - Left Side */}
+          <div className="order-1 lg:order-1 text-left">
+            <div className="slide-in">
+              <h1 className="artistic-heading mb-2">EKSPERIMENT</h1>
+              <h2 className="text-white text-2xl mb-8">Where Art Meets Audience</h2>
+            </div>
+
+            <div className="max-w-lg mb-10 slide-in" style={{ animationDelay: '0.2s' }}>
+              <p className="text-white/90 text-lg">
+                A platform dedicated to showcasing the raw, unfiltered creativity of South African artists. 
+                Acting as the bridge between artists and audiences, we provide a space for unique features, 
+                exhibitions, and collaborations.
+              </p>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 mt-8 slide-in" style={{ animationDelay: '0.3s' }}>
+              <button 
+                onClick={goToGallery} 
+                className="artistic-button hover:scale-105 transform transition-all duration-300"
+                aria-label="Go to gallery"
+              >
+                Explore Now
+              </button>
+              <Link to="/contact" className="artistic-button" style={{ background: 'rgba(255, 26, 26, 0.3)', backdropFilter: 'blur(5px)' }}>
+                Contact Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Image Content - Right Side (Desktop), Below Text (Mobile) */}
+          <div className="order-0 lg:order-2 relative">
+            {/* Decorative elements */}
+            <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-[#ff1a1a]/40 z-10 rounded-tl-lg"></div>
+            <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-[#ff1a1a]/40 z-10 rounded-br-lg"></div>
+
+            <div className="hero-image" data-aos="fade-up">
+              <img 
+                src="/13.jpg"
+                alt="EKSPERIMENT Art"
+                className="w-full h-full object-cover rounded-lg shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a0000] to-transparent opacity-40 rounded-lg"></div>
+              <div className="absolute bottom-3 left-3 bg-black/50 px-2 py-1 rounded text-xs text-white backdrop-blur-sm">
+                Featured Artwork
               </div>
             </div>
-            
-            
           </div>
         </div>
+
+      
       </section>
 
       {/* Features Section with Parallax */}
